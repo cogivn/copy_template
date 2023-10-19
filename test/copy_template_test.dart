@@ -1,4 +1,4 @@
-// import 'package:use_template/use_template.dart';
+// import 'package:use_template/copy_template.dart';
 // import 'package:test/test.dart';
 
 // void main() {

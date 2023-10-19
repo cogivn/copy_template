@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:dcli/dcli.dart';
+import 'package:path/path.dart';
 
 /// Changes the name of the new clonned Flutter package / project from pubspec.
 void changePubspecName({

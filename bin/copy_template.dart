@@ -1,7 +1,7 @@
 import 'dart:io';
 
+import 'package:copy_template/copy_template.dart';
 import 'package:dcli/dcli.dart';
-import 'package:use_template/use_template.dart';
 
 void main(List<String> arguments) {
   late final String _newAppName;
@@ -79,10 +79,16 @@ void main(List<String> arguments) {
         : _pathToInstall = truepath(_givenPath);
   }
 
+  final branchOfTemplate = ask(
+    ConstStrings.branchOfTemplate,
+    required: false,
+  );
+
   // Execute the operations.
   UseTemplate.instance.exec(
     newAppNameSnakeCase: _newAppName,
     addressOfTemplate: _repositoryOfTemplate,
+    branchOfTemplate: branchOfTemplate,
     givenPath: _pathToInstall,
   );
 }

@@ -10,7 +10,7 @@ It basically clones/copies the project and than changes all imports and platform
 ## Installation
 Open terminal and type the following code.
 ````
-> dart pub global activate use_template
+> dart pub global activate copy_template
 ````
 
 ## Usage
@@ -26,17 +26,17 @@ You are asked for three parameters.
 ### 1. One line code usage
 ##### With a template from a git repository
 ````
-> use_template my_new_application https://github.com/baranacikgoz/BloC_repository_pattern_template C:\Users\baran\Software\
+> copy_template my_new_application https://github.com/baranacikgoz/BloC_repository_pattern_template C:\Users\baran\Software\
 ````
 ##### With a template from your computer
 ````
-> use_template my_new_application C:\path_to_template\flutter_template_app C:\Users\baran\Software\
+> copy_template my_new_application C:\path_to_template\flutter_template_app C:\Users\baran\Software\
 ````
 ### 2. Interactive usage
 You can use interactive interface by passing no arguments.
 
 ````
-> use_template
+> copy_template
 ````
 ![1](https://user-images.githubusercontent.com/52239507/181810321-cad98c35-d712-4f3a-bef4-bafd0b4a3636.png)  
 

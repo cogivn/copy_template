@@ -1,4 +1,4 @@
-part of '../use_template.dart';
+part of '../copy_template.dart';
 
 /// Extension for capitalizing a string.
 extension StringCapitalizationExtension on String {

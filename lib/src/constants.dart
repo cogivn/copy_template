@@ -1,4 +1,4 @@
-part of '../use_template.dart';
+part of '../copy_template.dart';
 
 /// Static class to hold constants.
 class ConstStrings {
@@ -7,12 +7,11 @@ class ConstStrings {
       'You have passed wrong number of arguments. '
       'Pass 3(name, repository, path)'
       ' or none if you want to continue with command line interface. \n'
-      r'Example usage: use_template my_new_flutter_app https://github.com/baranacikgoz/BloC_repository_pattern_template.git C:\Users\baranacikgoz\Desktop\my_new_app_name '
-      '\nor just run use_template with any arguments to use interactive cli.';
+      r'Example usage: copy_template my_new_flutter_app https://github.com/cogivn/flutter.git C:\Users\cogivn\Desktop\my_new_app_name '
+      '\nor just run copy_template with any arguments to use interactive cli.';
 
   /// Default template.
-  static const defaultTemplate =
-      'https://github.com/baranacikgoz/BloC_repository_pattern_template.git';
+  static const defaultTemplate = 'https://github.com/cogivn/flutter.git';
 
   /// Enter new app's name text.
   static const enterAppNameText = 'Enter your new app name: ';
@@ -28,6 +27,8 @@ class ConstStrings {
   /// Path to install text.
   static const pathToInstallText = 'Pass an absolute path to install your app. '
       'The default is the current path if you leave empty: ';
+
+  static const branchOfTemplate = 'Pass an branch to clone your app. The default is the [master] if you leave empty: ';
 
   /// Couldn't create directory text.
   static const couldntCreateDirectory =

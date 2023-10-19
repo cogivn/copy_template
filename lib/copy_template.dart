@@ -1,15 +1,17 @@
 import 'dart:io';
 
+import 'package:copy_template/src/name_changer_methods/change_android_name.dart';
+import 'package:copy_template/src/name_changer_methods/change_flutter_name.dart';
+import 'package:copy_template/src/name_changer_methods/change_ios_name.dart';
+import 'package:copy_template/src/name_changer_methods/change_linux_name.dart';
+import 'package:copy_template/src/name_changer_methods/change_macos_name.dart';
+import 'package:copy_template/src/name_changer_methods/change_web_name.dart';
+import 'package:copy_template/src/name_changer_methods/change_windows_name.dart';
 import 'package:dcli/dcli.dart';
-import 'package:use_template/src/name_changer_methods/change_android_name.dart';
-import 'package:use_template/src/name_changer_methods/change_flutter_name.dart';
-import 'package:use_template/src/name_changer_methods/change_ios_name.dart';
-import 'package:use_template/src/name_changer_methods/change_linux_name.dart';
-import 'package:use_template/src/name_changer_methods/change_macos_name.dart';
-import 'package:use_template/src/name_changer_methods/change_web_name.dart';
-import 'package:use_template/src/name_changer_methods/change_windows_name.dart';
+import 'package:path/path.dart';
 
 part 'src/constants.dart';
+
 part 'src/extensions.dart';
 
 /// Repository class to handle operations.
@@ -29,6 +31,7 @@ class UseTemplate {
   void exec({
     required String newAppNameSnakeCase,
     required String addressOfTemplate,
+    required String branchOfTemplate,
     required String givenPath,
   }) {
     _pathToInstall = Directory(join(givenPath, newAppNameSnakeCase)).path;
@@ -53,7 +56,7 @@ class UseTemplate {
       }
       try {
         // Clone the repository in it.
-        _cloneRepository(gitAddress, _pathToInstall);
+        _cloneRepository(gitAddress, branchOfTemplate, _pathToInstall);
       } catch (e) {
         printerr('${ConstStrings.couldntCloneRepository} : $e');
         // Abort.
@@ -279,6 +282,7 @@ class UseTemplate {
     // ignore: avoid_print
     print('DONE.');
   }
+
   /* Exec method ends here. */
 
   void _createDirectory(String path) {
@@ -287,8 +291,12 @@ class UseTemplate {
     }
   }
 
-  void _cloneRepository(String repository, String path) {
-    'git clone $repository $path'.run;
+  void _cloneRepository(String repository, String branch, String path) {
+    String targetBranch = '';
+    if (branch.isNotEmpty) {
+      targetBranch = '--branch $branch';
+    }
+    'git clone $targetBranch $repository $path'.run;
   }
 
   // Copies the files from the folder to the new folder.
