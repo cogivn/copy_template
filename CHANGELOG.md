@@ -1,3 +1,9 @@
+## 1.0.5
+- refactor: rename app name in proguard-rules.pro
+
+## 1.0.4
+- refactor: support change environment files
+
 ## 1.0.3
 - chore: update README.md file
 

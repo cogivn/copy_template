@@ -9,15 +9,21 @@ void changeAndroidName({
   required String newNameSnakeCase,
   required String newNameUpperedFirstChars,
 }) {
-  final _basePath = join(baseFolderPath, 'android', 'app');
+  final basePath = join(baseFolderPath, 'android', 'app');
   final List<File> filesToChange = [
-    File(join(_basePath, 'build.gradle')),
-    File(join(_basePath, 'src', 'debug', 'AndroidManifest.xml')),
+    File(join(baseFolderPath, '.env.alpha')),
+    File(join(baseFolderPath, '.env.dev')),
+    File(join(baseFolderPath, '.env.prg')),
+    File(join(baseFolderPath, '.env.uat')),
+    File(join(baseFolderPath, '.env.prd')),
+    File(join(basePath, 'build.gradle')),
+    File(join(basePath, 'proguard-rules.pro')),
+    File(join(basePath, 'src', 'debug', 'AndroidManifest.xml')),
     //androidManifest,
-    File(join(_basePath, 'src', 'main', 'AndroidManifest.xml')),
+    File(join(basePath, 'src', 'main', 'AndroidManifest.xml')),
     File(
       join(
-        _basePath,
+        basePath,
         'src',
         'main',
         'kotlin',
@@ -27,7 +33,7 @@ void changeAndroidName({
         'MainActivity.kt',
       ),
     ),
-    File(join(_basePath, 'src', 'profile', 'AndroidManifest.xml')),
+    File(join(basePath, 'src', 'profile', 'AndroidManifest.xml')),
   ];
 
   for (final file in filesToChange) {
@@ -41,8 +47,7 @@ void changeAndroidName({
   }
 
   //! Double check to make sure 'android label: ....' name is changed.
-  final androidManifest =
-      File(join(_basePath, 'src', 'main', 'AndroidManifest.xml'));
+  final androidManifest = File(join(basePath, 'src', 'main', 'AndroidManifest.xml'));
   final androidManifestLines = androidManifest.readAsLinesSync();
 
   final newLines = androidManifestLines.map((e) {
