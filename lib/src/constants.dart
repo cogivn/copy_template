@@ -22,34 +22,34 @@ class ConstStrings {
 
   /// Repository of template text.
   static const repoOfTemplateText =
-      'Pass a valid git repository address containing a Flutter project as template, or a directory exists in your computer or you can leave it empty to use default template: ';
+      'Repository url(default: $defaultTemplate): ';
 
   /// Path to install text.
-  static const pathToInstallText = 'Pass an absolute path to install your app. '
-      'The default is the current path if you leave empty: ';
+  static const String pathToInstallText = 'Target directory(default: current path): ';
 
-  static const branchOfTemplate = 'Pass an branch to clone your app. The default is the [master] if you leave empty: ';
+  /// The target branch to clone source from repos.
+  static const String branchOfTemplate = 'Branch(default: master): ';
 
   /// Couldn't create directory text.
-  static const couldntCreateDirectory =
+  static const String couldntCreateDirectory =
       'Could not create directory to clone repository!';
 
   /// Couldn't clone repository text.
-  static const couldntCloneRepository = 'Could not clone repository!';
+  static const String couldntCloneRepository = 'Could not clone repository!';
 
   /// Couldn't copy files from template text.
-  static const couldntCopyFilesFromTemplate =
+  static const String couldntCopyFilesFromTemplate =
       'Could not copy files from template folder!';
 
   /// Couldnt find directory text.
-  static const noDirectory = 'No such directory exists in your computer!';
+  static const String noDirectory = 'No such directory exists in your computer!';
 
   /// Couldnt find pubspec.yaml text.
-  static const noPubspec =
+  static const String noPubspec =
       'There is no pubspec.yaml file in template directory. That means it is not a valid Flutter project.';
 
   /// Couldn't get old name text.
-  static const couldntGetOldName = 'Could not get old name from pubspec.yaml!';
+  static const String couldntGetOldName = 'Could not get old name from pubspec.yaml!';
 
   /// Couldn't find directory text.
   static String couldntFindDir(String dirName) {

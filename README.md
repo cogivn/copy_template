@@ -26,7 +26,7 @@ You are asked for three parameters.
 ### 1. One line code usage
 ##### With a template from a git repository
 ````
-> copy_template my_new_application https://github.com/baranacikgoz/BloC_repository_pattern_template C:\Users\baran\Software\
+> copy_template my_new_application https://github.com/cogivn/flutter C:\Users\baran\Software\
 ````
 ##### With a template from your computer
 ````

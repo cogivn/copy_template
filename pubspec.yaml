@@ -1,7 +1,7 @@
 name: copy_template
 
 description: Allows you to use any Flutter & Dart project as a template with a single line command.
-version: 1.0.2
+version: 1.0.3
 
 homepage: https://github.com/cogivn/copy_template.git
 repository: https://github.com/cogivn/copy_template.git
