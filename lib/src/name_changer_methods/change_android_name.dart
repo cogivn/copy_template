@@ -47,7 +47,8 @@ void changeAndroidName({
   }
 
   //! Double check to make sure 'android label: ....' name is changed.
-  final androidManifest = File(join(basePath, 'src', 'main', 'AndroidManifest.xml'));
+  final androidManifest =
+      File(join(basePath, 'src', 'main', 'AndroidManifest.xml'));
   final androidManifestLines = androidManifest.readAsLinesSync();
 
   final newLines = androidManifestLines.map((e) {

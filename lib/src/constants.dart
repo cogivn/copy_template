@@ -25,7 +25,8 @@ class ConstStrings {
       'Repository url(default: $defaultTemplate): ';
 
   /// Path to install text.
-  static const String pathToInstallText = 'Target directory(default: current path): ';
+  static const String pathToInstallText =
+      'Target directory(default: current path): ';
 
   /// The target branch to clone source from repos.
   static const String branchOfTemplate = 'Branch(default: master): ';
@@ -42,14 +43,16 @@ class ConstStrings {
       'Could not copy files from template folder!';
 
   /// Couldnt find directory text.
-  static const String noDirectory = 'No such directory exists in your computer!';
+  static const String noDirectory =
+      'No such directory exists in your computer!';
 
   /// Couldnt find pubspec.yaml text.
   static const String noPubspec =
       'There is no pubspec.yaml file in template directory. That means it is not a valid Flutter project.';
 
   /// Couldn't get old name text.
-  static const String couldntGetOldName = 'Could not get old name from pubspec.yaml!';
+  static const String couldntGetOldName =
+      'Could not get old name from pubspec.yaml!';
 
   /// Couldn't find directory text.
   static String couldntFindDir(String dirName) {
