@@ -1,3 +1,8 @@
+## 1.0.7
+🔄 Changed
+* Updated dcli dependency to 4.0.5.
+* Change the app name in env files.
+
 ## 1.0.6
 🔄 Changed
 * Updated dcli dependency to 4.0.1.

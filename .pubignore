@@ -3,7 +3,7 @@
 
 .buildlog
 .DS_Store
-.idea
+.idea/
 .pub/
 .dart_tool/
 .settings/
